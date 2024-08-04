@@ -577,3 +577,123 @@ input, textarea,select, button {
     height: 2px;
     
 }
+
+/* Service */
+.service {
+    margin-top: 190px;
+    padding: 68px 0 100px;
+    background: #FFF6ED;
+}
+
+.service__top {
+    text-align: center;
+}
+
+.service__desc {
+    color: #5E6085;
+    margin-bottom: 15px;
+    font-family: var(--font-heading);
+    font-size: 1.6rem;
+    font-weight: 600;
+    line-height: 1; /* 100% */
+}
+
+.service__body {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    margin-top: 70px;
+    column-gap: 65px;
+}
+
+.service-item {
+    padding: 30px;
+    width: 294px;
+    border-radius: 10px;
+    border: 2px solid rgba(255, 188, 122, 0.26);
+    background: #FFF;
+}
+
+.service-item + .service-item {
+    margin-top: 24px;
+}
+
+.service-item__heading {
+    position: relative;
+    padding-left: 12px;
+    color: #000958;
+    font-family: var(--font-heading);
+    font-size: 2.2rem;
+    font-weight: 600;
+    line-height: 1; /* 100% */
+}
+
+.service-item__heading::before {
+    content:"";
+    display: inline-block;
+    position: absolute;
+    inset: 0 auto 0 0;
+    width: 2px;
+    border-radius: 1px;
+    background: linear-gradient(90deg, #FF5B2E 0.39%, #FFA187 100.29%);
+}
+
+.service-item__desc {
+    margin-top: 18px;
+    color: #656689;
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 1.71; /* 171.429% */
+}
+
+.service-item__more {
+    display: inline-flex;
+    align-items: center;
+    margin-top: 24px;
+    color: #34396A;
+    font-family: var(--font-heading);
+    font-size: 1.2rem;
+    font-weight: 400;
+    line-height: 1; /* 100% */
+
+}
+
+.service-item__more::after {
+    margin-left: 5px;
+    margin-top: 1px;
+    content: url(../icons/ArrowUpRight.svg);
+}
+
+.service__media {
+    margin-top: 18px;
+    position: relative;
+}
+
+.service__media::after {
+    content: "";
+    position: absolute;
+    height: 350px;
+    left: 16px;
+    right: 16px;
+    bottom: 0;
+    border-radius: 10px;
+    background: linear-gradient(180deg, #9DF1FB 0%, #73D0DB 108.14%);
+}
+
+.service__img {
+    position: relative;
+    display: block;
+    width: 100%;
+    z-index: 1;
+}
+
+.service__cta-wrap {
+    display: flex;
+    justify-content: center;
+    margin-top: 45px;
+}
+
+.service__cta {
+    min-width: 214px;
+    color: #FF5B2E;
+    border-color: currentColor;
+}
