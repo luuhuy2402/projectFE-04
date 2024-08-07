@@ -54,9 +54,9 @@ input, textarea,select, button {
 }
 
 .btn--primary {
-    color: #fff;
-    background: var(--primary-color);
-    border-color: var(--primary-color) ;
+    color: #fff !important;
+    background: var(--primary-color) !important;
+    border-color: var(--primary-color) !important;
 
 }
 
@@ -824,4 +824,157 @@ input, textarea,select, button {
     min-width: 193px;
     color: #FF5B2E;
     border-color: #FF5B2E;
+}
+
+/* pricing */
+.pricing {
+    padding: 86px 0;
+    background: #FFF6ED;
+}
+
+.pricing__container {
+    width: 994px;
+}
+
+.pricing__heading,
+.pricing__desc {
+    text-align: center;
+}
+
+.pricing__desc {
+    width: 709px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.pricing__switch-wrap {
+    display: flex;
+    justify-content: center;
+    margin-top: 38px;
+}
+
+.pricing__switch-label {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 276px;
+    height: 56px;
+    padding: 0 40px;
+    border-radius: 31px;
+    border: 1px solid rgb(255 91 46 / 60%);
+    cursor: pointer;
+    /* để người dùng ko select vào được  */
+    user-select: none;
+}
+
+.pricing__switch-label::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 140px;
+    height: 100%;
+    border-radius: inherit;
+    background: #FF5B2E;
+}
+.pricing__switch-value {
+    position: relative;
+    z-index: 1;
+    color: #FFF;
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 1; /* 100% */
+}
+
+    /* //khi input được check thì tác động vào thẻ label đứng sau */
+.pricing__switch-input:checked +.pricing__switch-label::before { 
+    /* hủy bỏ left=0 ở trên  */
+    left: auto;
+
+    width: 131px;
+    right: 0;
+}
+
+.pricing__switch-input:not(:checked) + .pricing__switch-label .pricing__switch-value:nth-of-type(2),
+.pricing__switch-input:checked + .pricing__switch-label .pricing__switch-value:nth-of-type(1) {
+    color: #FF5B2E;
+}
+
+.pricing__switch-inner {
+    position: relative;
+}
+
+.pricing__sale-off {
+    position: absolute;
+    top: -10px;
+    right: -112px;
+}
+
+.pricing__list {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    column-gap: 44px;
+    margin-top: 56px;
+}
+
+.pricing-item {
+    padding: 30px 28px;
+    border-radius: 20px;
+    background: #FFF;
+}
+
+.pricing-item__type {
+    color: #FF5B2E;
+    font-size: 1.2rem;
+    font-weight: 400;
+    line-height: 1; /* 100% */
+}
+
+.pricing-item__heading {
+    margin-top: 8px;
+    color: #3F4065;
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 1; /* 100% */
+}
+
+.pricing-item__price {
+    margin-top: 24px;
+    color: #000958;
+    font-family: var(--font-heading);
+    font-size: 3.3rem;
+    font-weight: 700;
+    line-height: 1.03; /* 103.03% */
+}
+
+.pricing-item__btn {
+    --height:44px;
+
+    margin-top: 22px;
+    width: 100%;
+    border: 1px solid rgba(255, 91, 46, 0.60);
+    color: #FF5B2E;
+    background: transparent;
+}
+
+.pricing-item__list {
+    margin-top: 24px;
+}
+
+.pricing-item__item {
+    /* để chữ ko bị thò thụt do dấu cách */
+    display: flex;
+
+    margin-top: 18px;
+    color: #656689;
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 1; /* 100% */
+}
+
+.pricing-item__item::before {
+    content: url(../icons/price-check.svg);
+    margin-right: 14px;
 }
